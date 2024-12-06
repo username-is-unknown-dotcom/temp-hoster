@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13 - Open Source Traffic Object Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #f5f5f5;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .reference {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 10px;
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Week 13 - Open Source Traffic Object Detection for Compliance and Legality Measure</h1>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>This report provides an overview of two open-source projects focused on traffic object detection,
+                specifically lane line detection and traffic sign detection. The methods employed in these projects are
+                evaluated for their applicability to our dataset, considering their performance, limitations, and
+                potential use in compliance and legality measures for traffic systems.</p>
+        </section>
+
+        <section class="section">
+            <h3>Open Source 1: Lane Line Detection</h3>
+
+            <h4>Methodology</h4>
+            <p>The lane line detection system uses Canny edge detection combined with the Hough Line Transform. Canny
+                edge detection helps in identifying the edges in the image, and the Hough Line Transform is used to
+                detect straight lines, which are crucial for identifying lane boundaries on the road.</p>
+
+            <h4>Testing and Results</h4>
+            <video controls>
+                <source src="./assets/vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h4>Limitations</h4>
+            <p>Although effective in detecting lane lines, the method encounters difficulties in more complex scenarios,
+                such as poor weather conditions and busy roads. The following video illustrates some of these
+                limitations:</p>
+
+            <video controls>
+                <source src="./assets/vid2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p>Despite these limitations, this open-source project remains promising for our dataset, as the scenarios
+                in our dataset are relatively less complex and do not exhibit the extreme conditions seen in the testing
+                video.</p>
+
+            <h4>Reference</h4>
+            <p class="reference">For more information on the lane line detection project, refer to the following GitHub
+                repository: <a href="https://github.com/georgesung/road_lane_line_detection" target="_blank">Road Lane
+                    Line Detection GitHub</a></p>
+        </section>
+
+        <section class="section">
+            <h3>Open Source 2: Traffic Sign Detection</h3>
+
+            <h4>Methodology</h4>
+            <p>The traffic sign detection system utilizes the YOLOv5s object detection algorithm, a state-of-the-art
+                deep learning model for real-time object detection. YOLOv5s is known for its balance between speed and
+                accuracy, making it suitable for detecting a variety of traffic signs in real-time.</p>
+
+            <h4>Testing and Results</h4>
+            <video controls>
+                <source src="./assets/vid3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h4>Reference</h4>
+            <p class="reference">To learn more about the traffic sign detection system, please refer to the GitHub
+                repository: <a href="https://github.com/aryan0141/RealTime_Detection-And-Classification-of-TrafficSigns"
+                    target="_blank">Real-Time Detection and Classification of Traffic Signs GitHub</a></p>
+        </section>
+
+        <section class="section">
+            <h2>Conclusion</h2>
+            <p>Both open-source projects—Lane Line Detection and Traffic Sign Detection—offer promising methods for
+                traffic object detection. While the lane line detection project has limitations under complex
+                conditions, it remains useful for our dataset. The traffic sign detection system, based on YOLOv5s, is
+                highly effective and suitable for real-time applications. Both solutions can contribute to enhancing
+                compliance and legality measures in traffic systems.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; SUSTech</p>
+    </footer>
+
+</body>
+
+</html>
